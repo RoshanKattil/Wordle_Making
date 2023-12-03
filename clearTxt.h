@@ -1,6 +1,11 @@
 #ifndef clearTxt
 #define clearTxt
 
+#include <fstream>
+#include <iostream>
+
+using namespace std;
+
 bool clearFile(string fileName)
 {
 
