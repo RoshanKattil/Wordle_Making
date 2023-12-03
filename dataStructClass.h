@@ -67,6 +67,11 @@ using namespace std;
       private:
         string correctWord;
 
+        void word_generation()
+        {
+            correctWord = randomWord(words);
+        }
+
         void sortLetters()
         {
             letterSorter(guessedWord, correctWord);
