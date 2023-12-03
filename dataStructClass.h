@@ -1,6 +1,11 @@
 #ifndef dataStructClass
 #define dataStructClass.h
 
+#include "randomWord.h"
+#include "letterSorter.h"
+#include "word_checker.h"
+#include "clearTxt.h"
+#include "txtToVector.h"
 
 #include <vector>
 #include <string>
