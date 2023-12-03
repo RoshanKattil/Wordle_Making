@@ -62,13 +62,39 @@ vector<vector<vector<int>>> letterSort(string guess, string solution)
 
  ofstream foutput; 
  ifstream finput;
- finput.open ("apnd.txt");
- foutput.open ("apnd.txt",ios::app); 
+        
+ finput.open ("green.txt");
+ foutput.open ("green.txt",ios::app); 
+
+for(int i = 0; i < greenList.size(); i++)
+{
+         if(finput.is_open())
+           foutput<< << greenList[i][0] << endl;
+}
  
- if(finput.is_open())
-   foutput<<"\nWrite here whatever you want to store in the text file.\n"; 
-  
- cout<<"\n Data has been appended to file";
+ finput.close();
+ foutput.close(); 
+
+finput.open ("yellow.txt");
+ foutput.open ("yellow.txt",ios::app); 
+
+for(int i = 0; i < yellowList.size(); i++)
+{
+         if(finput.is_open())
+           foutput<< << yellowList[i][0] << endl;
+}
+ 
+ finput.close();
+ foutput.close(); 
+
+finput.open("grey.txt");
+foutput.open("grey.txt",ios::app); 
+
+for(int i = 0; i < greyList.size(); i++)
+{
+         if(finput.is_open())
+           foutput<< << greyList[i][0] << endl;
+}
  
  finput.close();
  foutput.close(); 
