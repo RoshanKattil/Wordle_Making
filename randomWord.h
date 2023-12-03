@@ -1,5 +1,5 @@
-#ifndef randomWord
-#define randomWord
+#ifndef randomWordFile
+#define randomWordFile
 
 #include <vector>
 #include <string>
