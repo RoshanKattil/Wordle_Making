@@ -38,7 +38,7 @@ bool wordChecker(string word, &vector<string> allowed)
 {
 
   //set to word change to allowed
-  const int index[25] = {141, 314, 512, 623, 695, 831, 946, 1015, 1049, 1069, 1089, 1177, 1284, 1321, 1362, 1504, 1527, 1632, 1998, 2147, 2180, 2223, 2306, 2312, 2315};
+  const int index[26] = {0, 596, 1332, 2056, 2630, 2861, 3323, 3846, 4266, 4397, 4597, 4935, 5424, 6010, 6298, 6591, 7236, 7291, 7814, 9013, 9679, 9835, 10034, 10364, 10380, 10555, 10657};
 
   //converting the first char to ascii then subtract by 97 to get it mapped from 1-27
   int asciiValue_0 = int(word[0])-97;
@@ -48,19 +48,19 @@ bool wordChecker(string word, &vector<string> allowed)
   {
     return false;
   )
-  else if((asciiValue_0 <= 25) && (asciiValue_0 >= 0)) //checks if first charachter is a letter
+  else if((asciiValue_0 <= 26) && (asciiValue_0 >= 0)) //checks if first charachter is a letter
   {
       // decides to start looking at start or end of subset of vector
       if(asciiValue_1 < 9)
       {
 
-      for(int i = (asciiValue_0 - 1); i < asciiValue_1; i++)
+      for(int i = index[asciiValue_0]; i < indlex[asciiValue_1 +1 ]; i++)
       {if(word == allowed[i])
         {return true;}
       }
-      else
+      else // checks in reverse if its closer to end
       {
-        for(int i = (asciiValue_0 - 1); i < asciiValue_1; i++)
+        for(int i = index[asciiValue_0 + 1]; i < index[asciiValue_0]; i--)
           {if(word == allowed[i])
             {return true;}}
       }
