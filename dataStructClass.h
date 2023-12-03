@@ -23,6 +23,7 @@ using namespace std;
         string guessedWord;
         vector<string> allowed = textToVec("allowed.txt");
         vector<string> words = textToVec("words.txt");
+        vector<string> green = textToVec("green.txt");
 
         int attempts;
 
@@ -58,15 +59,6 @@ using namespace std;
                 }
         }
 
-      // function that sorts letters into green, yellow, and grey
-        
-
-      
-
-
-      private:
-        string correctWord;
-
         void word_generation()
         {
             correctWord = randomWord(words);
@@ -76,8 +68,27 @@ using namespace std;
         {
             letterSorter(guessedWord, correctWord);
         }
+
+        bool game_over()
+        {
+
+            green = textToVec("green.txt");
+            if(green.size >= 5)
+            { return true;}
+
+        }
+
+
+      // function that sorts letters into green, yellow, and grey
         
 
+      
+
+
+      private:
+        string correctWord;
+
+        
         //function to get random word
 
         
