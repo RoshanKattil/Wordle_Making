@@ -1,6 +1,9 @@
 #ifndef dataStructClass
 #define dataStructClass.h
 
+
+#include <vector>
+#include <string>
 #include <iostream>
 
 using namespace std;
