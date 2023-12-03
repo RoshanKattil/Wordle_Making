@@ -11,6 +11,7 @@
 #include <string>
 #include <fstream>
 #include <iostream>
+#include  <bits/stdc++.h>
 
 using namespace std;
 
@@ -20,27 +21,55 @@ using namespace std;
       public:
         string inputString;
         string guessedWord;
+        vector<string> allowed = textToVec("allowed.txt");
+        vector<string> words = textToVec("words.txt");
+
         int attempts;
+
+        bool guessed = false;
         
 
-        void do_something();
+        string get_input()
+        {
+            guessed = false;
+            cout << "Enter your guess:" << endl; 
+            getline(cin, inputString); 
+            
+        }
+        
 
-        // function that gets input
-
-        void input_verification()
+        bool input_verification()
         {
             // if input is a verifable word guessedWord = input
               // function that verifies input
-              //attempts++;
+                if(wordChecker())
+                {
+                    guessedWord = inputString;
+                    attempts++;
+                    guessed = true;
+                    return true;
+                }
+                else
+                {
+                    cout << "not a valid guess" << endl;
+                    return false;
+                }
         }
 
       // function that sorts letters into green, yellow, and grey
+        
 
       
 
 
       private:
         string correctWord;
+
+        void sortLetters()
+        {
+            letterSorter(guessedWord, correctWord);
+        }
+        
 
         //function to get random word
 
