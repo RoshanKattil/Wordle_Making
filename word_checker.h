@@ -35,7 +35,27 @@ using namespace std:
 bool wordChecker(string word)
 {
 
-  int index[25] = {141, 314, 512, 623, 695, 831, 946, 1015, 1049, 1069, 1089, 1177, 1284, 1321, 1362, 1504, 1527, 1632, 1998, 2147, 2180, 2223, 2306, 2312, 2315};
+  const int index[25] = {141, 314, 512, 623, 695, 831, 946, 1015, 1049, 1069, 1089, 1177, 1284, 1321, 1362, 1504, 1527, 1632, 1998, 2147, 2180, 2223, 2306, 2312, 2315};
+
+  //converting the first char to ascii then subtract by 97 to get it mapped from 1-27
+  int asciiValue = int(word[0])-97;
+
+  if(word[0] == x) // checks if first charachter is not x
+  {
+    return false;
+  )
+  else if((asciiValue <= 25) && (asciiValue >= 0)) //checks if first charachter is a letter
+  {
+
+    
+
+  }
+  else
+  {
+    return false;
+  }
+  
+  
   
 
 }
