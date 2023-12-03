@@ -34,6 +34,8 @@ using namespace std;
             guessed = false;
             cout << "Enter your guess:" << endl; 
             getline(cin, inputString); 
+
+            return inputString;
             
         }
         
