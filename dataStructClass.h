@@ -21,6 +21,7 @@ using namespace std;
       public:
         string inputString;
         string guessedWord;
+
         vector<string> allowed = textToVec("allowed.txt");
         vector<string> words = textToVec("words.txt");
         vector<string> green = textToVec("green.txt");
@@ -40,7 +41,7 @@ using namespace std;
             
         }
         
-
+        //checks if input is a useable word
         bool input_verification()
         {
             // if input is a verifable word guessedWord = input
