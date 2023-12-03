@@ -1,5 +1,5 @@
-#ifndef MY_HEADER
-#define MY_HEADER
+#ifndef clearTxt
+#define clearTxt
 
 bool clearFile(string fileName)
 {
